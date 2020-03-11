@@ -24,11 +24,14 @@ public:
 
 
 	// функции-сеттеры
-	virtual void setWorkTime(int Course);
-	virtual void setMoney(double Scholarship);
+	void setCourse(int Course);
+	void setScholarship(double Scholarship);
 
 	// функции-геттеры
-	virtual int getWorkTime() const;
-	virtual double getMoney() const;
+	int getCourse() const;
+	double getScholarship() const;
+
+	// возвращение типа объекта
+	virtual const char* getType();
 };
 

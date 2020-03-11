@@ -3,8 +3,7 @@
 
 
 
-class Teacher :
-	public Human
+class Teacher : public Human
 {
 private:
 	int	m_experience;	// стаж
@@ -25,12 +24,15 @@ public:
 
 
 	// функции-сеттеры
-	virtual	void setWorkTime(int Experience);
-	virtual void setMoney(double Salary);
+	void setExperience(int Experience);
+	void setSalary(double Salary);
 
 	// функции-геттеры
-	virtual int getWorkTime() const;
-	virtual double getMoney() const;
+	int getExperience() const;
+	double getSalary() const;
+
+	// возвращение типа объекта
+	virtual const char* getType();
 };
 
 

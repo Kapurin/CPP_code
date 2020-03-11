@@ -8,17 +8,12 @@ Human::Human() {}
 Human::Human(std::string Name,
 	std::string SecondName,
 	std::string MiddleName,
-	int YearBirth,
-	int WorkTime,
-	double Money
-)
+	int YearBirth)
 {
 	m_name = Name;
 	m_secondName = SecondName;
 	m_middleName = MiddleName;
 	m_yearBirth = YearBirth;
-	m_workTime = WorkTime;
-	m_money = Money;
 }
 
 // деструктор
@@ -46,15 +41,6 @@ void Human::setYearBirth(int YearBirth)
 	m_yearBirth = YearBirth;
 }
 
-void Human::setWorkTime(int WorkTime)
-{
-	m_workTime = WorkTime;
-}
-
-void Human::setMoney(double Money)
-{
-	m_money = Money;
-}
 
 
 
@@ -79,22 +65,18 @@ int Human::getYearBirth() const
 	return m_yearBirth;
 }
 
-int Human::getWorkTime() const
+// возвращение типа объекта
+const char* Human::getType()
 {
-	return m_workTime;
-}
-
-double Human::getMoney() const
-{
-	return m_money;
+	return "Human";
 }
 
 
 
 // получение ФИО человека
-std::string Human::getFullName() const
+std::string Human::getFullName()
 {
-	return m_secondName + " " + m_name + " "+ m_middleName;
+	return (m_secondName + " " + m_name + " " + m_middleName);
 }
 
 

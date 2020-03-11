@@ -10,18 +10,13 @@ protected:
 	std::string m_secondName;	// фамилия
 	std::string m_middleName;	// отчество
 	int	m_yearBirth;			// год рождения
-	int	m_workTime;				// курс/стаж
-	double m_money;				// стипендия/ЗП
 public:
 	// конструктор
 	Human();
 	Human(std::string Name,
 		std::string SecondName,
 		std::string MiddleName,
-		int YearBirth,
-		int WorkTime,
-		double Money
-	);
+		int YearBirth);
 
 	// деструктор
 	~Human();
@@ -32,19 +27,19 @@ public:
 	void setSecondName(std::string SecondName);
 	void setMiddleName(std::string MiddleName);
 	void setYearBirth(int YearBirth);
-	virtual void setWorkTime(int WorkTime);
-	virtual void setMoney(double Money);
+
 
 	// функции-геттеры
 	std::string getName() const;
 	std::string getSecondName() const;
 	std::string getMiddleName() const;
 	int getYearBirth() const;
-	virtual int getWorkTime() const;
-	virtual double getMoney() const;
+
+	// возвращение типа объекта
+	virtual const char* getType();
 
 	// получение ФИО человека
-	std::string getFullName() const;
+	std::string getFullName();
 
 };
 

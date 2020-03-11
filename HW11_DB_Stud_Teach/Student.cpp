@@ -24,27 +24,30 @@ Student::~Student() {}
 
 
 // функции-сеттеры
-void Student::setWorkTime(int Course)
+void Student::setCourse(int Course)
 {
 	m_course = Course;
 }
 
-void Student::setMoney(double Scholarship)
+void Student::setScholarship(double Scholarship)
 {
 	m_scholarship = Scholarship;
 }
 
 
 // функции-геттеры
-int Student::getWorkTime() const
+int Student::getCourse() const
 {
 	return m_course;
 }
 
-double Student::getMoney() const
+double Student::getScholarship() const
 {
 	return m_scholarship;
 }
 
-
-
+// возвращение типа объекта
+const char* Student::getType()
+{
+	return "Student";
+}

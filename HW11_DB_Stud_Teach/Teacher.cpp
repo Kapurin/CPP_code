@@ -24,27 +24,32 @@ Teacher::~Teacher() {}
 
 
 // функции-сеттеры
-void Teacher::setWorkTime(int Experience)
+void Teacher::setExperience(int Experience)
 {
 	m_experience = Experience;
 }
 
-void Teacher::setMoney(double Salary)
+void Teacher::setSalary(double Salary)
 {
 	m_salary = Salary;
 }
 
 
 // функции-геттеры
-int Teacher::getWorkTime() const
+int Teacher::getExperience() const
 {
 	return m_experience;
 }
 
-double Teacher::getMoney() const
+double Teacher::getSalary() const
 {
 	return m_salary;
 }
 
+// возвращение типа объекта
+const char* Teacher::getType()
+{
+	return "Teacher";
+}
 
 
