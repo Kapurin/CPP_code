@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 #include <ctime>
 
 class Boxer
@@ -28,13 +29,13 @@ public:
 // служебные функции
 
 // функция вывода текущего здоровья игрока
-void PrintPlayHealth(Boxer *P, int Num);
+void PrintPlayHealth(Boxer* P, int Num, std::ofstream &log);
 
 // функция вывода информации в начале атаки
-void PrintFightStartInfo(int Num1, int Num2);
+void PrintFightStartInfo(int Num1, int Num2, std::ofstream &log);
 
 // функция вывода информации в конце атаки
-void PrintFightEndInfo(Boxer *P2, int Num1, int Num2);
+void PrintFightEndInfo(Boxer *P2, int Num1, int Num2, std::ofstream &log);
 
 // функция нанесения удара
-void FightPunch(Boxer *P1, Boxer *P2);
+void FightPunch(Boxer *P1, Boxer *P2, std::ofstream &log);

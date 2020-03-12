@@ -1,1 +1,3 @@
-﻿  CP_Game_Boxing.vcxproj -> Z:\D\ITEA\PO\CP_20200311\Debug\CP_Game_Boxing.exe
+﻿  CP_main.cpp
+Z:\D\ITEA\PO\CP_20200311\CP_Game_Boxing\CP_main.cpp(20,17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  CP_Game_Boxing.vcxproj -> Z:\D\ITEA\PO\CP_20200311\Debug\CP_Game_Boxing.exe
